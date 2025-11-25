@@ -1,33 +1,35 @@
-# Setup Instructions
+````markdown
+## Prerequisites
 
-Follow these steps to set up your environment.
+Install the required packages by running:
 
-## 1. Install required packages
-
-Run the following command in Termux:
-
-```
+```bash
 pkg install fzf zoxide file unrar p7zip termux-api
-```
+````
 
-Make sure **Termux:API** is installed from the **same source** as Termux (the source where GitHub is installed).
+> Ensure that Termux:API is installed from the same source as Termux.
 
-## 2. Make scripts executable
+## Setup
 
-```
+1. Make all scripts executable:
+
+```bash
 chmod +x ~/.config/zsh/scripts/*.sh
 ```
 
-## 3. Update plugins
+2. Update plugins:
 
-```
+```bash
 update-plugins
 ```
 
-## 4. Switch default shell
+3. Switch your default shell:
 
-Use the command below to change your default shell:
-
-```
+```bash
 switch-shell
 ```
+
+> Use this command to change your default shell between **Bash** and **Zsh**.
+
+```
+
