@@ -1,5 +1,4 @@
-````markdown
-## Prerequisites
+## Setup Instructions
 
 Install the required packages by running:
 
@@ -30,6 +29,3 @@ switch-shell
 ```
 
 > Use this command to change your default shell between **Bash** and **Zsh**.
-
-```
-
