@@ -1,4 +1,4 @@
-## Setup Instructions
+## Prerequisites
 
 Install the required packages by running:
 
