@@ -1,4 +1,4 @@
-run `chmod +x ~/.config/zsh/scripts/*.sh"`
+run `chmod +x ~/.config/zsh/scripts/*.sh`
 
 run `update-plugins`
 
