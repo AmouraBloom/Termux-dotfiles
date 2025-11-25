@@ -1,40 +1,26 @@
-# ~/.config/starship.toml
+"$schema" = 'https://starship.rs/config-schema.json'
 
-# Get editor completions based on the config schema  
-"$schema" = 'https://starship.rs/config-schema.json'  
+add_newline = true
 
-# -----------------------------------------
-# General Prompt Configuration
-# -----------------------------------------
-add_newline = false               # Inserts a blank line between shell prompts  
+# ---------------------------------------------------------
+# TWO-LINE CLEAN FORMAT
+# ---------------------------------------------------------
 format = """
-$shell\
-$directory\
-$git_branch$git_status\
-$nodejs\
-$ruby\
-$python\
-$rust\
-$golang\
-$time\
-$character
+$shell$directory \
+$git_branch$git_status
+$nodejs$python$rust$golang\
+$time$cmd_duration$character\
 """
-
-# -----------------------------------------
-# Shell Identification Module
-# -----------------------------------------
+# ---------------------------------------------------------
+# SHELL MODULE (just icon + name)
+# ---------------------------------------------------------
 [shell]
-# Displays the current shell (bash, zsh, fish, nu, elvish, etc.)
 disabled = false
-
-# Format of the shell display
 format = "[$indicator]($style) "
 style = "bold cyan"
-
-# Customize symbols for each shell
-bash_indicator = " bash"
-zsh_indicator = " zsh"
-fish_indicator = "󰈺 fish"
+bash_indicator = " "
+zsh_indicator = "" 
+fish_indicator = "󰈺 "
 powershell_indicator = " pwsh"
 ion_indicator = "⚙️ ion"
 elvish_indicator = "✨ elvish"
@@ -43,22 +29,25 @@ xonsh_indicator = "🧬 xonsh"
 cmd_indicator = " cmd"
 nu_indicator = "󰞷 nu"
 
-# -----------------------------------------
-# Directory Module
-# -----------------------------------------
+# ---------------------------------------------------------
+# DIRECTORY (your old style)
+# ---------------------------------------------------------
 [directory]
 truncation_length = 3
 style = "bold blue"
+format = "[$path]($style) "
 
-# -----------------------------------------
-# Git Module
-# -----------------------------------------
+# ---------------------------------------------------------
+# GIT (compact for small screens)
+# ---------------------------------------------------------
 [git_branch]
-symbol = " "
+symbol = ""
 style = "purple"
+format = "[$symbol $branch]($style) "
 
 [git_status]
 style = "yellow"
+#format = "[$all_status$ahead_behind]($style) "
 
 # -----------------------------------------
 # Programming Language Modules
@@ -66,10 +55,12 @@ style = "yellow"
 [nodejs]
 symbol = "󰎙 "
 style = "green"
+detect_extensions = ["js", "ts", "mjs", "cjs"]
 
 [python]
 symbol = " "
 style = "green"
+detect_extensions = ["py"]
 
 [rust]
 symbol = " "
@@ -79,43 +70,33 @@ style = "red"
 symbol = "󰟓 "
 style = "cyan"
 
-# -----------------------------------------
-# Time Module
-# -----------------------------------------
+# ---------------------------------------------------------
+# TIME (small + clean)
+# ---------------------------------------------------------
 [time]
-disabled = true
-time_format = "%H:%M"        # see below for various time format
+disabled = false
+time_format = "%H:%M"
 style = "bold white"
 format = "[$time]($style) "
 
-# --------------------
+# -----------------------------------------
 # Command duration
-# --------------------
+# -----------------------------------------
 [cmd_duration]
-min_time = 2000               # Show if command takes > 2 seconds
-format = "took [$duration](bold yellow)"
-show_milliseconds = true
+min_time = 5000
+format = "⏳[$duration](bold yellow) "
+show_milliseconds = false
 
-# -----------------------------------------
-# Prompt Character
-# -----------------------------------------
+# ---------------------------------------------------------
+# PROMPT CHARACTER
+# ---------------------------------------------------------
 [character]
-# success_symbol = "[➜](bold green)"
 success_symbol = "[❯](bold green)"
 error_symbol = "[✗](bold red)"
 vicmd_symbol = "[V](bold green) "
 
-# Set the continuation prompt to "▶▶"  
-#continuation_prompt = "▶▶"     
-
-
-# Make prompt a single line instead of two lines
-[line_break]
-disabled = true
-
-
-#Set time format 
-#"%H:%M"  → 19:32
-#"%I:%M %p"  → 07:32 PM 
-#"%I:%M:%S %p"  → 07:32:15 PM  
-#| "%l:%M %p"  → 7:32 PM (no leading zero)
+#  Time Format
+# "%H:%M"  → 19:32
+# "%I:%M %p"  → 07:32 PM 
+# "%I:%M:%S %p"  → 07:32:15 PM  
+#  "%l:%M %p"  → 7:32 PM (no leading zero)
