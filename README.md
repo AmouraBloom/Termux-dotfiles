@@ -16,14 +16,16 @@ pkg install fzf zoxide file unrar p7zip termux-api
 chmod +x ~/.config/zsh/scripts/*.sh
 ```
 
-2. Update plugins:
+2. Update zsh plugins:
 
+Run
 ```bash
 update-plugins
 ```
 
 3. Switch your default shell:
 
+Run
 ```bash
 switch-shell
 ```
