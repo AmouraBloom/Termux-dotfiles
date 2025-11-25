@@ -30,7 +30,7 @@ cmd_indicator = " cmd"
 nu_indicator = "󰞷 nu"
 
 # ---------------------------------------------------------
-# DIRECTORY (your old style)
+# DIRECTORY
 # ---------------------------------------------------------
 [directory]
 truncation_length = 3
