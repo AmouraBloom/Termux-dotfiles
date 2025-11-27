@@ -3,7 +3,7 @@ local M = {}
 ----------------------------------------------------------
 -- Defaults
 ----------------------------------------------------------
-M.current_theme  = "evil"
+M.current_theme  = "tokyonight"
 M.current_layout = "evil1"
 
 -- Save file
