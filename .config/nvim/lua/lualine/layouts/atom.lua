@@ -7,7 +7,7 @@ M.sections = {
   lualine_a = {
     { "mode", separator = { left = "", right = "" } },
   },
-  lualine_b = {},
+  lualine_b = { { "branch", icon = "" }, "diff" },
   lualine_c = { { "filename", path = 1 } },
   lualine_x = { "encoding", "filetype" },
   lualine_y = { "progress" },

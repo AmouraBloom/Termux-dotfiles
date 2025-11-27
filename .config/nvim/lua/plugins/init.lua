@@ -17,6 +17,14 @@ require("lazy").setup({
       })
     end,
   },
+  
+    {
+    'folke/tokyonight.nvim',
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme('tokyonight-night')
+    end,
+  },
 
   {
     "lewis6991/gitsigns.nvim",
