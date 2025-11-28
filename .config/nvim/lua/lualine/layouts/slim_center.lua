@@ -5,8 +5,8 @@ M.component_separators = { left = " ", right = " " }
 
 M.sections = {
   lualine_a = {},
-  lualine_b = { "mode",{ "branch", icon = "" },"diff" },
-  lualine_c = {},
+  lualine_b = { "mode"},,
+  lualine_c = {{"branch", icon = "" },"diff" },
   lualine_x = {},
   lualine_y = { "filename" },
   lualine_z = { "location" },
