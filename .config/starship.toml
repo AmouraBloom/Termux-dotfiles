@@ -30,10 +30,11 @@ cmd_indicator = " cmd"
 nu_indicator = "󰞷 nu"
 
 # ---------------------------------------------------------
-# DIRECTORY
+# DIRECTORY (your old style)
 # ---------------------------------------------------------
 [directory]
 truncation_length = 3
+truncation_symbol= "••/"
 style = "bold blue"
 format = "[$path]($style) "
 
