@@ -93,7 +93,7 @@ eval "$(zoxide init bash)"
 
 # Switch between Bash ↔ Zsh
 switch-shell() {
-    command "$HOME/.config/zsh/scripts/switch-shell" "$@"
+    command "$HOME/.config/zsh/scripts/switch-shell.sh" "$@"
 }
 
 # Filtered find used only for fzf pipelines
