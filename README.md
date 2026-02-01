@@ -3,7 +3,7 @@
 Install the required packages by running:
 
 ```bash
-pkg install fzf zoxide file unrar p7zip termux-api eza file clang
+pkg install fzf zoxide file unrar p7zip termux-api eza file clang starship neovim
 ````
 
 > Ensure that Termux:API is installed from the same source as Termux.
