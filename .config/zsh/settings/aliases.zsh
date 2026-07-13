@@ -25,7 +25,7 @@ alias fgrep='grep -F --color=auto'
 # Termux package helpers
 # ----------------------------------------------------
 alias update='pkg --check-mirror update'
-alias upgrade='pkg upgrade -y'
+alias upgrade='apt upgrade -y'
 alias search='pkg search'
 alias autoremove='apt autoremove -y'
 alias clean='pkg clean'
