@@ -139,7 +139,7 @@ extract() {
             unrar x "$1"
             ;;
         *.7z)
-            command -v 7z >/dev/null || { echo "install p7zip"; return 1; }
+            command -v 7z >/dev/null || { echo "install 7zip"; return 1; }
             7z x "$1"
             ;;
         *) echo "extract: Unknown format: $1" ;;
